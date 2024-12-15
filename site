@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    
+   
+<meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+   
+<title>Input Form</title>
+</head>
+<body>
+    <h1>Welcome to My Game Website</h1>
+
+    <p>Enter your name to be greeted:</p>
+
+    <!-- Form for user input -->
+    <form id="userForm">
+        
+     
+<label for="userName">Your Name: </label>
+        <input type="text" id="userName" name="userName" required>
+        <button type="submit">Submit</button>
+    </form>
+
+    <p id="greetingMessage"></p>
+
+    <script>
+        // JavaScript to handle the form submission
+        document.getElementById('userForm').addEventListener('submit', function(event) {
+            event.preventDefault(); // Prevent form from reloading the page
+
+            var userName = document.getElementById('userName').value;
+            if (userName) {
+                // Display greeting message
+                document.getElementById('gr
+
+        // JavaScript to handle the form submission
+        document.getElementById('userForm').addEventListener('submit', function(event) {
+            event.preventDefault(); // Prevent form from reloading the page
+
+            var userName = document.getElementById('userName').value;
+            if (userName) {
+                // Display greeting message
+                document.getElementById('greetingMessage').textContent = 'Hello, ' + userName + '! Welcome to the game!';
+            } else {
+                document.getElementById('greetingMessage').textContent = 'Please enter yo
+
+        // JavaScript to handle the form submission
+        document.getElementById('userForm').addEventListener('submit', function(event) {
+            event.preventDefault(); // Prevent form from reloading the page
+
+            var userName = document.getElementById('userName').value;
+            if (userName) {
+                // Display greeting message
+                document.getElementById('greetingMessage').textContent = 'Hello, ' + userName + '! Welcome to the game!';
+            } else {
+                document.getElementById('greetingMessage').textContent = 'Please enter your name.';
+            }
+        });
+    </script>
+</body>
+</html>
